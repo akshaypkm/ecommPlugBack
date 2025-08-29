@@ -1,4 +1,4 @@
-package com.ecomm.plugback.User;
+package com.ecomm.plugback.Entities.User;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -7,7 +7,7 @@ import com.ecomm.plugback.Enums.Role;
 
 @Entity
 @Data
-@Table(name = "app_users")
+@Table(name = "users")
 public class UserEntity {
     
     @Id
@@ -24,5 +24,6 @@ public class UserEntity {
     private String password;
     
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Role role;
 }

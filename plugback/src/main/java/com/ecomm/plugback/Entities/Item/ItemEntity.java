@@ -1,6 +1,6 @@
-package com.ecomm.plugback.Item;
-import com.ecomm.plugback.Order.OrderEntity;
-import com.ecomm.plugback.Product.ProductEntity;
+package com.ecomm.plugback.Entities.Item;
+import com.ecomm.plugback.Entities.Order.OrderEntity;
+import com.ecomm.plugback.Entities.Product.ProductEntity;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Positive;

@@ -1,4 +1,4 @@
-package com.ecomm.plugback.Product;
+package com.ecomm.plugback.Entities.Product;
 
 import java.math.BigDecimal;
 

@@ -1,7 +1,7 @@
-package com.ecomm.plugback.Order;
+package com.ecomm.plugback.Entities.Order;
 import com.ecomm.plugback.Enums.Status;
-import com.ecomm.plugback.Item.ItemEntity;
-import com.ecomm.plugback.User.UserEntity;
+import com.ecomm.plugback.Entities.Item.ItemEntity;
+import com.ecomm.plugback.Entities.User.UserEntity;
 
 import jakarta.persistence.*;
 import lombok.Data;
