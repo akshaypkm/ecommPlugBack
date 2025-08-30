@@ -4,12 +4,14 @@ import com.ecomm.plugback.Entities.Item.ItemEntity;
 import com.ecomm.plugback.Entities.User.UserEntity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.math.BigDecimal;
 
 
 @Entity
@@ -22,11 +24,14 @@ public class OrderEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="user_id", nullable = false)
+    @JoinColumn(name="userId", nullable = false)
     private UserEntity user;
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+    @Min(0)
+    private BigDecimal totalAmount;
 
     private LocalDateTime createdAt;
 
