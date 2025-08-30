@@ -4,6 +4,7 @@ public enum Category {
     FRESHGOODS,
     ELECTRONICS,
     DRESS,
-    FURNITURE
+    FURNITURE,
+    BOOKS
     // ADD MORE ENUMS AS PER SCENARIO
 }

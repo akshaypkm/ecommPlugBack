@@ -29,8 +29,8 @@ public class ProductEntity {
     @Positive
     private BigDecimal price;
 
-    @Min(0)
-    private int stockQuantity;
+    @Min(100)
+    private Integer stock;
 
     @Enumerated(EnumType.STRING)
     private Category category;     // VISIT - com.ecomm.plugback.Enums.Category - to add/delete enums
