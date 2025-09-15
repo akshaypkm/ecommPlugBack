@@ -3,14 +3,13 @@ package com.ecomm.plugback.Services;
 import com.ecomm.plugback.Configurations.AppConfig;
 import com.ecomm.plugback.DTO.ProductAddDTO;
 import com.ecomm.plugback.DTO.ProductUpdateDTO;
-
-
 import com.ecomm.plugback.Repository.ProductRepository;
 import com.ecomm.plugback.Entities.Product.ProductEntity;
 
 import java.util.Optional;
 import java.util.List;
 
+import org.springframework.data.domain.*;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -25,10 +24,10 @@ public class ProductService {
         this.productRepo = productRepo;
         this.modelMapper = modelMapper;
     }
-
-    public List<ProductEntity> getProducts(){
-        List<ProductEntity> productEntity = productRepo.findAll();
-        return productEntity;
+    
+    public Page<ProductEntity> getProducts(int page, int size){
+        Pageable pageable = PageRequest.of(page,size);
+        return productRepo.findAll(pageable);
     }
 
     public Optional<ProductEntity> getProductsById(Long id){
